@@ -1,0 +1,16 @@
+.main{
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.image{
+    background-image: url(../../assets/ai.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.text{
+    font-weight: 500;
+    font-family:'Courier New', Courier, monospace;
+}

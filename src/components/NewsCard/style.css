@@ -1,0 +1,8 @@
+.card{
+    border-bottom: 5px solid black;
+}
+
+.activecard{
+    border-bottom: 5px solid rgb(26, 140, 255);
+
+}
