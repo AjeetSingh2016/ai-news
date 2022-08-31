@@ -6,11 +6,69 @@
 
 .image{
     background-image: url(../../assets/ai.png);
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
+.container{
+    display: flex;
+}
+.buttonOne{
+    background-color: white;
+    width: 49%;
+    font-size: 15px;
+    cursor: pointer;
+}
+.buttonTwo{
+    color: white;
+    width: 49%;
+    border-width: 2px;
+    border-color: rgb(255, 8, 214);
+    background-color: transparent;
+    font-size: 15px;
+    box-shadow: rgba(255, 8, 214, 0.35) 0px 5px 15px;
+    cursor: pointer;
+}
+
+.buttonOne:hover{
+    color: white;
+    width: 49%;
+    border-style: groove;
+    border-width: 2px;
+    border-color: rgb(28, 228, 255);
+    background-color: transparent;
+    font-size: 25px;
+    transition: 500ms;
+    box-shadow: rgba(0, 238, 255, 0.486) 0px 5px 15px;
+}
+.buttonTwo:hover{
+    background-color: rgb(28, 228, 255);
+    border-style: none;
+    color: rgb(34, 34, 34);
+    font-size: 25px;
+    transition: 500ms;
+    box-shadow: rgba(0, 238, 255, 0.486) 0px 5px 15px;
+  
+}
+
+
+
 
 .text{
     font-weight: 500;
-    font-family:'Courier New', Courier, monospace;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+@media only screen and (max-width:900px){
+    .container{
+       display: none;
+    }
+    .text{
+        text-align: center;
+    }
+    .textParagraph{
+        text-align: center;
+      
+    }
+
+}
+

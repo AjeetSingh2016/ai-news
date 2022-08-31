@@ -18,6 +18,7 @@ const App = () => {
         if (command === "news") {
           setActiveArticle(-1)
           setArticles(res);
+          window.scrollTo(0, 500);
         }
         else if(command==='highlight'){
           setActiveArticle((prevActiveArticle) => prevActiveArticle + 1);
@@ -35,6 +36,7 @@ const App = () => {
 
   return (
     <div>
+
       <Home />
       <NewsCards articles={articles} activeArticle={activeArticle} />
     </div>

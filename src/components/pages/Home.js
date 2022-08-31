@@ -2,55 +2,97 @@ import React from "react";
 import { Box, Typography, Button, Stack } from "@mui/material";
 import "./style.css";
 import NavBar from "../NavBar";
+import InfoCard from "../InfoCard";
 
 const Home = () => {
   return (
     <Box style={styles.mainContainer}>
       <NavBar />
       <Box style={styles.container}>
-        <Box style={styles.details}>
+        <Box
+          sx={{
+            height: "100%",
+            alignItems: "center",
+            display: "flex",
+            flexDirection: "column",
+            paddingTop:{xs:"0px", lg:"20px"},
+            width:{xs:"100%", md:"60%"}
+          }}
+        >
           <Stack
-            spacing={4}
-            style={{
-              padding: "45px",
-            //   backgroundColor: "white",
+          spacing={3}
+            sx={{
+              padding:{xs: "5px", lg:"45px"},
               display: "flex",
               alignItems: "space-between",
             }}
           >
             <Box>
-
-              <Typography className="text" variant="h2">
+              <Typography  className="text" sx={styles.text}>
                 Hi, I'm Alan
               </Typography>
-              <Typography className="text" variant="h2">
+              <Typography className="text" sx={styles.text}>
                 Your magician is ready!
               </Typography>
-              <Typography className="text" variant="h2">
+              <Typography  className="text" sx={styles.text}>
                 Get your top headlines easily
               </Typography>
-
             </Box>
 
-            <Box>
-
-              <Typography variant="h7" color="gray">
-                  Here you can get the top headlines from various sources by just giving voice command for example "Give the news from BBC SPORTS" and for the more information and commands go to "How to use" section.
+            <Typography className="textParagraph" variant="h7" color="#BEBEBE">
+                Here you can get the top headlines from various sources by just
+                giving voice command for example "Give the news from BBC SPORTS"
+                and for the more information and commands go to "How to use"
+                section.
               </Typography>
 
+            <Box style={{display: 'flex', justifyContent: 'space-between', width: '100%', height: "50px"}}>
+
+              <button className="buttonOne"  >
+                How To Use
+              </button>
+              <button className="buttonTwo">
+                Watch Video
+              </button>
             </Box>
-
-            <Box>
-
-              <Button style={styles.button} variant="contained" >How to use</Button>
-
-            </Box>
-
           </Stack>
+          <Box 
+
+          sx={{
+          marginTop:{xs:"55px", lg:"0px"},
+          display: "flex",
+          width: '100%',
+          height: "30%",
+          alignItems:"center",
+          flexWrap: "true",
+          justifyContent:"space-around",
+          }}>
+            <InfoCard />
+
+          </Box>
+          
         </Box>
 
-        <Box style={styles.imageContainer}>
-          <Box className="image" style={styles.image} />
+        <Box
+          sx={{
+            width: "40%",
+            height: "100%",
+            justifyContent: "center",
+            backgroundColor: "transparent",
+            alignItems: "center",
+          }}
+          className="container"
+        >
+          <Box
+            className="image"
+            sx={{
+              backgroundColor: "transparent",
+            width: "80%",
+            justifyContent: "center",
+            alignItems: "center",
+            display: "flex",
+            height: "90%" }}
+          />
         </Box>
       </Box>
     </Box>
@@ -61,40 +103,21 @@ const styles = {
   mainContainer: {
     className: "main",
     width: "100%",
-    height: "100vh",
+    height: "95vh",
     minHeight: "100%",
     maxHeight: "100%",
+    backgroundColor: "#000000",
+
   },
   container: {
-    // position: "relative",
-    // backgroundColor: "red",
-    height: "90%",
-    display: "flex",
-  },
-  details: {
-    width: "50%",
-    height: "100%",
-    alignItems: "center",
-    // backgroundColor: "yellow",
-    display: "flex",
-    flexDirection: "column",
-    paddingTop: "20px",
-  },
-  imageContainer: {
-    // backgroundColor: "white",
-    width: "50%",
+    position: "relative",
     height: "100%",
     display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
+    backgroundColor: "#000000",
   },
-  image: {
-    // backgroundColor: "white",
-    width: "80%",
-    height: "90%",
-  },
-  button:{
-      borderRadius: "12px",
+  text:{
+    fontSize:{xs:"2.6rem", sm:"3rem", lg:"3rem"},
+    color: "white",
   }
 };
 
